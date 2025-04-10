@@ -8,11 +8,12 @@ on:
       base_branch:
         description: "Base branch to merge into"
         required: true
-        default: "main"
+        # default: "main"
+        default: "test_main"
 
 jobs:
   auto-merge:
-    if: github.ref == 'refs/heads/incubating'
+    if: github.ref == 'refs/heads/new-automerge-gitaction'
     runs-on: ubuntu-latest
     steps:
       - uses: jpmcb/prow-github-actions@v1.1.3
